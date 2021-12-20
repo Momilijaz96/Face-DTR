@@ -11,5 +11,14 @@ This repo covers implementation of face detection, recognition and tracking  on 
 </p>
 
 <h2>Detection</h2>
+<p>
 Detection is performed by a wrap over of original github repo for [Yolo5Face: Why reinventing a face detector? paper](https://github.com/deepcam-cn/yolov5-face). This paper implements a yolov5n with wing loss, which is trained over WIDEFace dataset, to perform face detection.
 Face detection with this repo was pretty smooth and robust to illumination changes, side poses and varying resolution of faces. 
+</p>
+
+<h2>Recogntion</h2>
+<p>
+  Recognition is performed using InceptionResNetv3, which is pretrained on VGGFace2, and we finetuned on faces of the people we wanted to recognize, in this case, we were three team members, whose faces we wanted algo to recognize, so we took 40 different images of each person, with varying backgrounds, clothes, illumination and face poses and sizes. In total, this model was fine tuned on 130 images roughly for 30 epochs.  
+</p>
+<p>
+  After fine tuning model, 3 different images of each person were passed though the model, one face from front, and other from left anf right side poses, and output of the final layer of trained Inception ResNet are stored in a file. At time of recognition, the detected faces from yolov5 detector are cropped and passed through this inception resnet to get face embeddings, which are then compared with the saved embeddings using euclidean distannce. If embeddings of the faces in the frame does not cross similarity threshold person is declared as unnown otherwise, closest embedding are used to assign label.
