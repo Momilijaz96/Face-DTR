@@ -36,7 +36,13 @@ Face detection with this repo was pretty smooth and robust to illumination chang
   DeepSORT tracker used here, has associated pre-trained convolutional network, for extracing deep representation of the tracked object to improve the mapping of tracked object with detector's detections. This convolutional network was pretrained on human body(pedestrians) not human faces but gave acceptabel performance when we used it for tracking faces.
   </p>
   
-  <h2>Acknowedgments</h2>
+  <h2>HardWare SetUp</h2>
+  Components used:
+  * [Jetson Xavier NX] (https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-xavier-nx/)
+  * [Logitech BRIO Webcam] (https://www.logitech.com/en-us/products/webcams/brio-4k-hdr-webcam.960-001105.html)
+  * USB3.0 to connect webcam to xavier
+  This algorithm is ran on jetson Xavier NX connected to a logitech BRIO usb camera and results were displayed on local system by connecting an ssh tunnel using -X option to the xavier.
+  <h2>Acknowledgments</h2>
   
   * [Detection by Yolo5Face](https://github.com/elyha7/yoloface)
   * [Recognition by Recogn module of FaceNet PyTorch](https://github.com/timesler/facenet-pytorch#use-this-repo-in-your-own-git-project)
