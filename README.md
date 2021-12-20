@@ -22,8 +22,10 @@ Face detection with this repo was pretty smooth and robust to illumination chang
 <h3>Detection Only - QuickSetUp</h3>
 * det.py file performs detection only.
 * You need to create a weights folder and put [this](https://drive.google.com/file/d/1oOxuQk6CN76pC02A2d1vWS2b35rKzdaA/view?usp=sharing) Yolov5 finetuned model in it.
-```
+* Change device in det.py line 16, for gpu use gpu=0/1 and for cpu platform use gpu=-1.
 
+```
+python3 det.py
 ```
 </p>
 
