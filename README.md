@@ -19,7 +19,7 @@ This repo performs face detection, recognition and tracking  on Jetson Xavier, w
 <p>
 Detection is performed by a wrap over of original github repo for paper [Yolo5Face: Why reinventing a face detector?](https://github.com/deepcam-cn/yolov5-face). This paper implements a yolov5n with wing loss, which is trained over WIDEFace dataset, to perform face detection.
 Face detection with this repo was pretty smooth and robust to illumination changes, side poses and varying resolution of faces. 
-<h3>Detection Only - QuickSetUp</h3>
+<h4>Detection Only - QuickSetUp</h4>
 
   * det.py file performs detection only.
   * You need to create a weights folder and put [this](https://drive.google.com/file/d/1oOxuQk6CN76pC02A2d1vWS2b35rKzdaA/view?usp=sharing) Yolov5 finetuned model in it.
