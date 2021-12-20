@@ -41,8 +41,8 @@ Face detection with this repo was pretty smooth and robust to illumination chang
   
   * [Jetson Xavier NX](https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-xavier-nx/)
   * [Logitech BRIO Webcam](https://www.logitech.com/en-us/products/webcams/brio-4k-hdr-webcam.960-001105.html)
-  * USB3.0 to connect webcam to xavier
-  This algorithm is ran on jetson Xavier NX connected to a logitech BRIO usb camera and results were displayed on local system by connecting an ssh tunnel using -X option to the xavier.
+  * USB3.0 to connect webcam to Xavier
+  <p>This algorithm is ran on jetson Xavier NX connected to a logitech BRIO usb camera and results were displayed on local system by connecting an ssh tunnel using -X option to the xavier.</p>
   <h2>Acknowledgments</h2>
   
   * [Detection by Yolo5Face](https://github.com/elyha7/yoloface)
