@@ -46,12 +46,12 @@ python3 det.py
 </p>
 
 
-<h2>Recogntion</h2>
+<h2>Recognition</h2>
 <p>
   Recognition is performed using InceptionResNetv3, which is pretrained on VGGFace2, and we finetuned on faces of the people we wanted to recognize, in this case, we were three team members, whose faces we wanted algo to recognize, so we took 40 different images of each person, with varying backgrounds, clothes, illumination and face poses and sizes. In total, this model was fine tuned on 130 images roughly for 30 epochs.  
 </p>
 <p>
-  Recogniton using above mentioned detector is performed as follows:
+  Recognition using above mentioned detector is performed as follows:
   
   * After fine tuning model, 3 different images of each person were passed though the model, one face from front, and other from left anf right side poses, and output of the final layer of trained Inception ResNet are stored in a file.
   * At time of recognition, the detected faces from yolov5 detector are cropped and saved.
