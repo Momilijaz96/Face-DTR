@@ -70,6 +70,14 @@ python3 det_recog.py
   <p>
   DeepSORT tracker used here, has associated pre-trained convolutional network, for extracing deep representation of the tracked object to improve the mapping of tracked object with detector's detections. This convolutional network was pretrained on human body(pedestrians) not human faces but gave acceptabel performance when we used it for tracking faces.
   </p>
+  <h4> Tracking and Detection Only- QuickSetUp</h4>
+  
+  * det_track.py performs detection and tracking only.
+  * Perform all changes in det_track.py as performed in det.py for detection.
+  
+  ```
+  python3 det_track.py
+  ```
   
   <h2>HardWare SetUp</h2>
   Components used:
