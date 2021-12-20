@@ -9,4 +9,5 @@ This repo covers implementation of face detection, recognition and tracking  on 
 <img src="images/res4.png" width="23%"></img>
 <img src="images/res5.png" width="23%"></img> 
 </p>
-<h3>QuickStart</h3>
+
+<h2>Detection</h2>
