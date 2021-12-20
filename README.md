@@ -22,6 +22,7 @@ Face detection with this repo was pretty smooth and robust to illumination chang
 <h4>Detection Only - QuickSetUp</h4>
 
   * det.py file performs detection only.
+  * Change the camera device to webcam device id of your system on line 19 in det.py
   * You need to create a weights folder and put [this](https://drive.google.com/file/d/1oOxuQk6CN76pC02A2d1vWS2b35rKzdaA/view?usp=sharing) Yolov5 finetuned model in it.
   * Change device in det.py line 16, for gpu use gpu=0/1 and for cpu platform use gpu=-1.
   * Change size of the image to your desired value 320 or 480 on line 8 in det.py
@@ -46,6 +47,8 @@ python3 det.py
   * These cropped faces are passed through this inception resnet to get face embeddings.
   * These embeddings are then compared with the saved embeddings using euclidean distannce. If embeddings of the faces in the frame does not cross similarity threshold person is declared as unnown otherwise, closest embedding are used to assign label.
   
+ <h4>Detection and Recognition - QuickSetUp</h4>
+ 
   <h2> Tracking </h2>
   <p> 
   Tracking is performed by [Deep SORT](https://github.com/nwojke/deep_sort) tracker, which is original SORT (Simple Online Real Time Tracking) tracker plus a deep convolutional network added to it, for improving the tracker's recognition accuracy. Simple SORT tracker uses just kalman filter based predicted state of the tracked object and does not includes any deep representation of the tracked item and hence leads to losing track of objcet for occlusion, or lightning changes. In our case as the side pose or illumination change or scale changes occured, the simple SORT tracker lost object track, and the track disappeared gradually whereas this deep SORT tracker performed really well and did not lose object track.
