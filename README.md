@@ -11,3 +11,5 @@ This repo covers implementation of face detection, recognition and tracking  on 
 </p>
 
 <h2>Detection</h2>
+Detection is performed by a wrap over of original github repo for [Yolo5Face: Why reinventing a face detector? paper](https://github.com/deepcam-cn/yolov5-face). This paper implements a yolov5n with wing loss, which is trained over WIDEFace dataset, to perform face detection.
+Face detection with this repo was pretty smooth and robust to illumination changes, side poses and varying resolution of faces. 
