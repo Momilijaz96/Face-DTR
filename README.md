@@ -1,5 +1,5 @@
 # Face-DTR
-This repo covers implementation of face detection, recognition and tracking  on Jetson Xavier, with above 15 FPS. 
+This repo performs face detection, recognition and tracking  on Jetson Xavier, with above 15 FPS. 
 * Face detection is performed by [Yolo5Face](https://github.com/elyha7/yoloface).
 * Face recognition is performed Inception ResNetv3, recognition module from [facenet-pytorch](https://github.com/timesler/facenet-pytorch#use-this-repo-in-your-own-git-project).
 * Tracking is performed by DeepSort Tracker from [deep_sort pytorch](https://github.com/ZQPei/deep_sort_pytorch).
@@ -29,4 +29,10 @@ Face detection with this repo was pretty smooth and robust to illumination chang
   * These embeddings are then compared with the saved embeddings using euclidean distannce. If embeddings of the faces in the frame does not cross similarity threshold person is declared as unnown otherwise, closest embedding are used to assign label.
   
   <h2> Tracking </h2>
-  Tracking is performed by [Deep SORT](https://github.com/nwojke/deep_sort) tracker, which original SORT tracker plus a deep convolutional network added to it, for improving the tracker's recognition accuracy. 
+  <p> 
+  Tracking is performed by [Deep SORT](https://github.com/nwojke/deep_sort) tracker, which is original SORT (Simple Online Real Time Tracking) tracker plus a deep convolutional network added to it, for improving the tracker's recognition accuracy. Simple SORT tracker uses just kalman filter based predicted state of the tracked object and does not includes any deep representation of the tracked item and hence leads to losing track of objcet for occlusion, or lightning changes. In our case as the side pose or illumination change or scale changes occured, the simple SORT tracker lost object track, and the track disappeared gradually whereas this deep SORT tracker performed really well and did not lose object track.
+  </p>
+  <p>
+  DeepSORT tracker used here, has associated pre-trained convolutional network, for extracing deep representation of the tracked object to improve the mapping of tracked object with detector's detections. This convolutional network was pretrained on human body(pedestrians) not human faces but gave acceptabel performance when we used it for tracking faces.
+  </p>
+  
