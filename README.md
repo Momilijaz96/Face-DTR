@@ -37,6 +37,7 @@ Face detection with this repo was pretty smooth and robust to illumination chang
   </p>
   
   <h2>Acknowedgments</h2>
+  
   * [Detection](https://github.com/elyha7/yoloface)
   * [Recognition](https://github.com/timesler/facenet-pytorch#use-this-repo-in-your-own-git-project)
   * [Tracking](https://github.com/ZQPei/deep_sort_pytorch)
