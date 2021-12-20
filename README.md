@@ -15,6 +15,18 @@ This repo performs face detection, recognition and tracking  on Jetson Xavier, w
 <img src="images/performance.png" width="70%"></img> 
 </p>
 
+<h2>Quick SetUp Face-DTR</h2>
+
+* main.py performs detection, recognition (of my team mates faces) and tracking.
+* Pretrained models for [detection](https://drive.google.com/drive/folders/1DP99QP7pSuKZT8uSuBZQESFwhuInK3vc?usp=sharing) and tracking (Pretrained model already in repo) can be reused.
+* For recogniton model you need to fine tune the model on custom faces to be recognized and get embeddings of the faces to be recognized and save in embeddings folder. For details check out Recognition subsection. Pre-trained recog for my team mates and sample embeddings are [here](https://drive.google.com/drive/folders/1DP99QP7pSuKZT8uSuBZQESFwhuInK3vc?usp=sharing)
+* You are all set!
+
+```
+python3 main.py
+```
+
+
 <h2>Detection</h2>
 <p>
 Detection is performed by a wrap over of original github repo for paper [Yolo5Face: Why reinventing a face detector?](https://github.com/deepcam-cn/yolov5-face). This paper implements a yolov5n with wing loss, which is trained over WIDEFace dataset, to perform face detection.
@@ -33,16 +45,6 @@ python3 det.py
 ```
 </p>
 
-<h2>Quick SetUp</h2>
-
-* main.py performs detection, recognition (of my team mates faces) and tracking.
-* Pretrained models for [detection](https://drive.google.com/drive/folders/1DP99QP7pSuKZT8uSuBZQESFwhuInK3vc?usp=sharing) and tracking (Pretrained model already in repo) can be reused.
-* For recogniton model you need to fine tune the model on custom faces to be recognized and get embeddings of the faces to be recognized and save in embeddings folder. For details check out Recognition subsection. Pre-trained recog for my team mates and sample embeddings are [here](https://drive.google.com/drive/folders/1DP99QP7pSuKZT8uSuBZQESFwhuInK3vc?usp=sharing)
-* You are all set!
-
-```
-python3 main.py
-```
 
 <h2>Recogntion</h2>
 <p>
