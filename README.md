@@ -33,7 +33,16 @@ python3 det.py
 ```
 </p>
 
+<h2>Quick SetUp</h2>
 
+* main.py performs detection, recognition (of my team mates faces) and tracking.
+* Pretrained models for [detection](https://drive.google.com/drive/folders/1DP99QP7pSuKZT8uSuBZQESFwhuInK3vc?usp=sharing) and tracking (Pretrained model already in repo) can be reused.
+* For recogniton model you need to fine tune the model on custom faces to be recognized and get embeddings of the faces to be recognized and save in embeddings folder. For details check out Recognition subsection. Pre-trained recog for my team mates and sample embeddings are [here](https://drive.google.com/drive/folders/1DP99QP7pSuKZT8uSuBZQESFwhuInK3vc?usp=sharing)
+* You are all set!
+
+```
+python3 main.py
+```
 
 <h2>Recogntion</h2>
 <p>
