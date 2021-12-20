@@ -8,7 +8,7 @@ This repo performs face detection, recognition and tracking  on Jetson Xavier, w
 <img src="images/res3.png" width="23%"></img>
 <img src="images/res4.png" width="23%"></img>
 <img src="images/res5.png" width="23%"></img> 
-<img src="images/performance.png" width="23%"></img> 
+<img src="images/performance.png" width="45%"></img> 
 </p>
 
 <h2>Detection</h2>
