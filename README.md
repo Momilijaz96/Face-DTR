@@ -49,6 +49,20 @@ python3 det.py
   
  <h4>Detection and Recognition - QuickSetUp</h4>
  
+ * det_recog.py performs detection and recognition only.
+ * Perform all changes, in the det_recog.py, as mention in detection for det.py.
+ * Train the inceptionNet model on few images of persons to be recognized and put in same 'weights' folder.
+ * A pre-trained resnet model for 320 and 480 image size, to recognize faces of my team members is [here](https://drive.google.com/drive/folders/1DP99QP7pSuKZT8uSuBZQESFwhuInK3vc?usp=sharing)
+ * Load approprate resnet pretrained model, according to the selected image size.
+ * Create a folder, call it embeddings.
+ * Pass atleast 2 sample images of ech persom from pretrained model, and save it in embeddings folder, sample embeddings folder for my team mates faces is [here](https://drive.google.com/drive/folders/1DP99QP7pSuKZT8uSuBZQESFwhuInK3vc?usp=sharing).
+ 
+ 
+ 
+```
+python3 det_recog.py
+```
+ 
   <h2> Tracking </h2>
   <p> 
   Tracking is performed by [Deep SORT](https://github.com/nwojke/deep_sort) tracker, which is original SORT (Simple Online Real Time Tracking) tracker plus a deep convolutional network added to it, for improving the tracker's recognition accuracy. Simple SORT tracker uses just kalman filter based predicted state of the tracked object and does not includes any deep representation of the tracked item and hence leads to losing track of objcet for occlusion, or lightning changes. In our case as the side pose or illumination change or scale changes occured, the simple SORT tracker lost object track, and the track disappeared gradually whereas this deep SORT tracker performed really well and did not lose object track.
